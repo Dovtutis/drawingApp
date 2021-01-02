@@ -31,7 +31,7 @@ canvas.addEventListener('mousemove', (e) => {
         const y2 = e.offsetY;
 
         drawCircle(x2, y2);
-        // drawLine(x, y, x2, y2);
+        drawLine(x, y, x2, y2);
         x = x2;
         y = y2;
     }
@@ -44,14 +44,14 @@ function drawCircle(x, y) {
     ctx.fill();
 }
 
-// function drawLine(x1, y1, x2, y2) {
-//     ctx.beginPath();
-//     ctx.moveTo(x1, y1);
-//     ctx.lineTo(x2, y2);
-//     ctx.strokeStyle = color;
-//     ctx.lineWidth = size;
-//     ctx.stroke();
-// }
+function drawLine(x1, y1, x2, y2) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = size * 2;
+    ctx.stroke();
+}
 
 decreaseBtn.addEventListener('click', ()=>{
     size -= 5;
